@@ -1,16 +1,35 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Saira+Extra+Condensed:500");
+
+
+@layer components{
+  .item{
+  @apply absolute opacity-0 top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2
+  }
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.container::before{
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 0) 40%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  bottom: 0;
+  content: " ";
+  left: 0;
+  right: 0;
+  position: absolute;
+  top: 0;
+  z-index: 100;
 }
 
-* {
-  box-sizing: border-box;
+.rotator{
+  transform: rotateX(28deg) translateX(-50%) perspective(300px);
+  transform-origin: 50% 100%;
 }
