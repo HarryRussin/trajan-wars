@@ -26,7 +26,7 @@ export default function Home() {
       .to(title.current, { scale: 0.05, ease: 'power2', duration: 8 ,rotate:0})
       .to(title.current, { opacity: 0, duration: 1.5 }, '-=1.5')
       .set(content.current, { opacity: 1 })
-      .to(content.current, { top: '-500%', duration: 100 })
+      .to(content.current, { top: '-800%', duration: 100 })
   }, []);
 
   return (
@@ -62,7 +62,7 @@ export default function Home() {
           )}
         </div>
         <section className='transition-all text-center item text-[#4bd5ee] text-[1.25rem]' ref={intro}>
-          A long time ago, in miss Lindsay's <br />classics class...
+          A long time ago, in miss Lindsay&apos;s <br />classics class...
         </section>
 
         <section className='flex justify-center w-[18rem] item' ref={title}>
@@ -73,12 +73,17 @@ export default function Home() {
             <div className='absolute top-[170%]' ref={content}>
               <h1 className='mb-[5rem] text-center font-[600] font-[Saira_Extra_Condensed]'>Episode LXIX</h1>
               <h2 className='mb-[7rem] scale-[115%] text-center font-[500]'>THE ARCH OF TRAJAN</h2>
-              <p className='text-left'>Beneventum. A lowly, unremarkable town that was once the prided entrance to the highway to the port of Brundisium. The Via Traiana. <br/>
+              <p className='text-left'><div className="flex">Beneventum. A lowly, unremarkable town that was once the prided entrance to the highway to the port of Brundisium. The Via Traiana. <img className='ml-5' src="https://www.wanderingitaly.com/maps/via-appia-traiana.png" alt="" /></div> <br/>
               One of the best preserved triumphal arches stands tall there, the Arch Of Trajan. 
                 <br/><br/>
+                <div className="flex">
+                <img className='mr-5' src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Benevento-Arch_of_Trajan_from_South.jpg/340px-Benevento-Arch_of_Trajan_from_South.jpg" alt="" />
                 Rebel propaganda shows Trajan giving money to the poor, presiding over sacrifices and founding cities.<br/><br/>
+                </div>
                 The goddess Victory is shown presented Trajan with a wreath which depicts glorius battles against the empirical Dacians<br/><br/>
-                The frieze depicts 107 figures: soldiers carrything the spoils of war, Trajan seen riding in a triumphal chariot.               
+                <div className="flex">
+                The frieze depicts 107 figures: soldiers carrything the spoils of war, Trajan seen riding in a triumphal chariot. And many more... <img className='ml-5 object-cover w-[400px]' src="https://www.romeartlover.it/Beneve38.jpg" alt="" />        
+                </div>
               </p>
             </div>
           </section>
